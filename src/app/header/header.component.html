@@ -9,6 +9,7 @@
 
       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0" *ngIf="loginservice.userLoggedIn">
         <li><a class="nav-link px-2 text-secondary">Home</a></li>
+        <li><a routerLink="/product/addproduct" class="nav-link px-2 ">Selling</a></li>
         <li><a class="nav-link px-2 text-white">Features</a></li>
         <li><a class="nav-link px-2 text-white">Pricing</a></li>
         <li><a class="nav-link px-2 text-white">FAQs</a></li>
@@ -17,9 +18,17 @@
       
 
       <div class="text-end ms-auto" *ngIf="!loginservice.userLoggedIn">
+        <div class="" >
         <button type="button" (click)="gotologin()" class="btn btn-outline-light me-2" *ngIf="!islogin">Login</button>
         <button type="button" (click)="gotosign()" class="btn btn-warning" *ngIf="!issignup">Sign-up</button>
+        
+         <!-- app.component.html -->
+
       </div>
     </div>
+    <div *ngIf="loginservice.userLoggedIn"> 
+      <i class="bi bi-box-arrow-right logoutIcon" (click)="alertMake()" title="Logout" ></i>
+    </div>
+  </div>
   </div>
 </header>

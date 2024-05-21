@@ -36,4 +36,7 @@ export class HeaderComponent implements OnInit, OnChanges {
     this.cdr.detectChanges(); // Trigger change detection manually
     this.router.navigate(['/']);
   }
+  alertMake(){
+    alert("adskhvgasl")
+  }
 }

@@ -1,0 +1,17 @@
+/* app.component.css */
+.logoutIcon {
+    font-size: 2rem; /* Adjust the size as needed */
+    color: #FFD43B;
+    text-align: center;
+  }
+  
+  .logoutIcon:hover {
+    cursor: pointer;
+  }
+  .rowFixer{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
