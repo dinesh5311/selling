@@ -27,4 +27,9 @@ export class LoginService {
 
   }
 
+  logout(){
+  
+        this.userLoggedIn = false;
+  }
+
 }
