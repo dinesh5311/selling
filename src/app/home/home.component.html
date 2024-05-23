@@ -1,0 +1,54 @@
+<body>
+  
+    
+
+
+<main>
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Selling</h1>
+        <p class="lead text-body-secondary">Products available at very cheap rates</p>
+        <!-- <p>
+          <a href="#" class="btn btn-primary my-2">Main call to action</a>
+          <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+        </p> -->
+      </div>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-body-tertiary">
+    <div class="container">
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col" *ngFor="let product of products">
+              <div class="card shadow-sm">
+                <img [src]="product.image_url" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="{{ product.name }}">
+                <div class="card-body">
+                  <h5 class="card-title">{{ product.name }}</h5>
+                  <p class="card-text">{{ product.description }}</p>
+                  <p class="card-text"><strong>Price:</strong> {{ product.price | currency }}</p>
+                  <p class="card-text"><strong>Stock Quantity:</strong> {{ product.stock_quantity }}</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Buy</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Add to Cart</button>
+                    </div>
+                    <small class="text-body-secondary">{{ product.created_at | date: 'short' }}</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        
+      </div>
+    </div>
+  
+
+</main>
+
+    
+
+</body>
