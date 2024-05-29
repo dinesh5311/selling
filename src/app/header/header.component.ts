@@ -10,7 +10,7 @@ import { ChangeDetectorRef } from '@angular/core';
 export class HeaderComponent implements OnInit, OnChanges {
   islogin: boolean = true;
   issignup: boolean = false;
-
+  userLoggedIn$ = this.loginservice.userLoggedIn$;
   constructor(public loginservice: LoginService, private router: Router ,private cdr: ChangeDetectorRef) { }
 
   ngOnInit() {
