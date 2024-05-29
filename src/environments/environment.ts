@@ -3,8 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: 'https://selling-back.onrender.com/'
 };
+
+// src/environments/environment.prod.ts
 
 /*
  * For easier debugging in development mode, you can import the following file
