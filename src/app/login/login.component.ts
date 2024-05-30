@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   login: FormGroup = new FormGroup({});
-
+  errorMsg = ''
   constructor(
     private fb: FormBuilder,
     private loginservice: LoginService,
@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
   }
 
   loginSubmit() {
+    this.errorMsg=''
     if (this.login.valid) {
       const email = this.login.get("exampleInputEmail1")?.value;
       const password = this.login.get("exampleInputPassword1")?.value;
@@ -42,6 +43,7 @@ export class LoginComponent implements OnInit {
         },
         error => {
           console.error('Login failed', error);
+          this.errorMsg = 'Authentication Failed !'
         }
       );
     }
